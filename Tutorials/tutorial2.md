@@ -39,4 +39,11 @@ We will use these for assignments, for the lab exams, and for sharing code in cl
    * Move the .gitignore file to Stage Changes, add a message (".gitignore updated") and **commit and push**
    
    
+ ## Extra
+ 
+You can clone *my* main class repository which will have all of the code we generate in class. Follow the steps above, and give it the link https://github.com/tjkendon/comp-1502-202001.git
+ 
+You can use the Team -> Pull command to regularily bring new code down from the repository.
+
+You can also use this to share code between different locations (such as your home and classroom machines), at the beginning of each session, use the Team -> Pull command which will bring down the latest changes from github.
    
