@@ -14,7 +14,29 @@ We will use these for assignments, for the lab exams, and for sharing code in cl
    * Go to Window -> Show View -> Other -> Git -> GitRepositories and click **open**
    * You will now see the git repository view, you can use this to connect to *remote* repositories.
    * Click on **Clone an existing Repository** (it will have the green arrow)
-   * Copy the link from the repository page and past it in the box at the top of the window. Eclipse should fill in the details. You can add your *github* username and password to have eclipse not bother you with the details all the time. (Tag "Store in Secure Store".
+   * Copy the link from the repository page and past it in the box at the top of the window. Eclipse should fill in the details. You can add your *github* username and password to have eclipse not bother you with the details all the time. (Check "Store in Secure Store".
    * Click next, to see a list of branches (which we don't care about) and next again to see the project wizard.
    * The defaults for the project wizard should be good. **Note the directory which the repository is being stored to**
   
+* To set up the project - in Eclipse:
+   * Go to File -> New -> Project -> Java Project
+   * Name the project
+   * Uncheck the default location box and browse to the directory you noted above, where the repostitory was stored.
+   * Click **Finish**
+   * Now you should be set up, with a src directory and README.md in your project's root.
+ 
+* Testing - make sure that Eclipse and github are talking.
+   * Right-click on the src directory and create a new class. *Name doesn't matter*
+   * Add a quick main / hello world to your program.
+   * Notice that the icon for the new class in the package explorer, now has a question mark. That's because it hasn't been added to git yet.
+   * Right click on the class, -> Team -> Commit
+   * This will show you the git staging view. 
+   * Drag the .java file into the staged changes area, add a message ("New class created...") and press **commit and push**
+   * This should add the file to the local repository and pushes that change to github.
+   * Look at your github page for your repository and you should see your new java class added.
+   * Go back to the staging view. Right click on .classpath and choose ignore, and on .project and choose ignore.
+      * This will keep git from moving unhelpful files to the repository, Eclipse edited the .gitignore file to acheive this.
+   * Move the .gitignore file to Stage Changes, add a message (".gitignore updated") and **commit and push**
+   
+   
+   
