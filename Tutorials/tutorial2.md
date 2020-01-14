@@ -6,6 +6,11 @@ Github allows me to create starter respositories for you. I can share them throu
 
 We will use these for assignments, for the lab exams, and for sharing code in class.
 
+* Click the correct link in the course blackboard. You will be asked to create a new account or to log in. Please do so (and please provide a username that I will be able to identify, so that I can give you a *grade*.
+* Github will process for a moment ("forking" a version of the starter repository for you to work with). Then it will provide you with a link to *your* repository.
+* Follow that link to the repository page. You can browse and look at the different tools available. We're not going to use them (much) except for the basic code view.
+
+Git works with a cycle, where in you do work and you add that to a "stage". Once you're happy with the stage, you will commit it, committing the changes into a "local repository", then you can "push" those changes to a remote repository. This allows you to keep safe version of your code stored away from your working computer and to keep track of the changes you've made.
 
 ## Phase 2 - Connecting Eclipse to your repository.
 
