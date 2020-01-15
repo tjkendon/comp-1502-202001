@@ -43,6 +43,10 @@ Git works with a cycle, where in you do work and you add that to a "stage". Once
       * This will keep git from moving unhelpful files to the repository, Eclipse edited the .gitignore file to acheive this.
    * Move the .gitignore file to Stage Changes, add a message (".gitignore updated") and **commit and push**
    
+As you work, you'll notice a '>' symbol getting added beside files in your view. These indicate which files are changed and have not been committed and pushed to github.
+
+Adding a message is always necessary, and adding better messages will help make your code more understandable.
+   
    
  ## Extra
  
