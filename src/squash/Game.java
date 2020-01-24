@@ -20,5 +20,16 @@ public class Game {
 		}
 	}
 	
+	public String scoreString() {
+		return playerOneScore + " - " + playerTwoScore;
+	}
+
+	public int getPlayerOneScore() {
+		return playerOneScore;
+	}
+
+	public int getPlayerTwoScore() {
+		return playerTwoScore;
+	}
 	
 }
