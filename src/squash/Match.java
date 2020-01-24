@@ -17,8 +17,6 @@ public class Match {
 			for (int i = 0; i < gameCount; i++) {
 				games.add(new Game());
 			}
-			System.out.println("New match with " 
-					+ games.size() + " games");
 		} else {
 			System.err.println("Invalid # of games");
 		}
