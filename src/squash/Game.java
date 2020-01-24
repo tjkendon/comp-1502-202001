@@ -20,6 +20,18 @@ public class Game {
 		}
 	}
 	
+	public boolean isWon() {
+		if (((playerOneScore >= 11) && 
+		   (playerOneScore >= playerTwoScore +2)) || 
+				((playerTwoScore >= 11) && 
+						   (playerTwoScore >= playerOneScore +2))) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+	
 	public String scoreString() {
 		return playerOneScore + " - " + playerTwoScore;
 	}
