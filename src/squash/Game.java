@@ -13,10 +13,12 @@ public class Game {
 		this.playerTwoScore = 0;
 	}
 	
-	public void printP1Score() {
-		System.out.println(playerOneScore);
+	public void score(int player) {
+		switch(player) {
+		case 1: playerOneScore++; break;
+		case 2: playerTwoScore++; break;
+		}
 	}
-	
 	
 	
 }
