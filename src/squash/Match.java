@@ -46,7 +46,7 @@ public class Match {
 	public String getScoreString() {
 		StringBuilder builder = new StringBuilder();
 		for (int i = 0; i < games.size(); i++) {
-			builder.append(i).append(" ").append(games.get(i)).append("\n");
+			builder.append(i).append(" ").append(games.get(i).scoreString()).append("\n");
 		}
 		return builder.toString();
 	}
