@@ -19,10 +19,10 @@ public class Client {
 		while (!line.equalsIgnoreCase("done")) {
 			switch (line) {
 			case ("1"): // match records point for player 1
-				match.recordPlayerOnePoint();
+				match.recordPlayerPoint(1);
 				break;
 			case ("2"): // match records point for player 2
-				match.recordPlayerTwoPoint();
+				match.recordPlayerPoint(1);
 				break;
 			default:
 				System.out.println("Unrecognized input");

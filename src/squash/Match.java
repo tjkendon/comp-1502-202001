@@ -32,7 +32,7 @@ public class Match {
 		return null;
 	}
 	
-	public void recordPlayerOnePoint(int player) {
+	public void recordPlayerPoint(int player) {
 		System.out.println("Player " + player + " Scores");
 		Game currentGame = getActiveGame();
 		if (currentGame != null) {
