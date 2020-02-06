@@ -6,9 +6,6 @@ public class Match {
 	
 	private ArrayList<Game> games;
 
-	// could add a default constructor here
-	// keep a "standard" number of games to begin with
-	
 	public Match(int gameCount) {
 		games = new ArrayList<>();
 		if ((gameCount >= 1) && 
@@ -26,7 +23,12 @@ public class Match {
 	public Game getActiveGame() {
 		for (Game g: games) {
 			// if game isn't won, return in
+			if (!g.isWon()) {
+				return g;
+			}
+
 		}
+		// return null if there's no answer we can use.
 		return null;
 	}
 	
