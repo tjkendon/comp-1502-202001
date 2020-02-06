@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Match {
 	
 	private ArrayList<Game> games;
+	
 
 	public Match(int gameCount) {
 		games = new ArrayList<>();
@@ -51,5 +52,30 @@ public class Match {
 		return builder.toString();
 	}
 	
+	public int winner() {
+		// return the winner # if we can or 0 if not
+		
+		int p1Wins = 0;
+		int p2Wins = 0;
+		
+		for (Game g: games) {
+			if (g.isWon()) {
+				if (g.winner() == 1) {
+					p1Wins++;
+				} else {
+					p2Wins++;
+				}
+			}
+		}
+		
+		if (p1Wins > (games.size() / 2)) {
+			return 1;
+		} else if (p2Wins > (games.size() / 2)) {
+			return 2;
+		} else {
+			return 0;
+		}
+		
+	}
 	
 }
