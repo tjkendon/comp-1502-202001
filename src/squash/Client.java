@@ -27,11 +27,12 @@ public class Client {
 			default:
 				System.out.println("Unrecognized input");
 			}
-			// output score
 			System.out.println(match.getScoreString());
-			// check for the game winner
-			// check for the match winner
-			// if winner is found stop
+			if (match.winner() > 0) {
+				System.out.println("Player " + match.winner() + " wins.");
+				// break should always be used with caution
+				break;
+			}
 
 			line = in.next();
 		}
