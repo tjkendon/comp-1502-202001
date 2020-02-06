@@ -32,15 +32,14 @@ public class Match {
 		return null;
 	}
 	
-	public void recordPlayerOnePoint() {
-		System.out.println("Player 1 Scores");
-		// find the active game & save the point
+	public void recordPlayerOnePoint(int player) {
+		System.out.println("Player " + player + " Scores");
+		Game currentGame = getActiveGame();
+		if (currentGame != null) {
+			currentGame.score(1);
+		}
 	}
 	
-	public void recordPlayerTwoPoint() {
-		System.out.println("Player 2 Scores");
-		// find the active game & save the point
-	}
 	
 	public String getScore() {
 		return "Unknown";
