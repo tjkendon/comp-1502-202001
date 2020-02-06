@@ -43,7 +43,7 @@ public class Match {
 	}
 	
 	
-	public String getScore() {
+	public String getScoreString() {
 		StringBuilder builder = new StringBuilder();
 		for (int i = 0; i < games.size(); i++) {
 			builder.append(i).append(" ").append(games.get(i)).append("\n");
