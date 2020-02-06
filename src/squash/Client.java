@@ -22,7 +22,7 @@ public class Client {
 				match.recordPlayerPoint(1);
 				break;
 			case ("2"): // match records point for player 2
-				match.recordPlayerPoint(1);
+				match.recordPlayerPoint(2);
 				break;
 			default:
 				System.out.println("Unrecognized input");
