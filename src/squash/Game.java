@@ -34,6 +34,18 @@ public class Game {
 		}
 
 	}
+	
+	public int winner() {
+		if (isWon()) {
+			if (playerOneScore > playerTwoScore) {
+				return 1;
+			} else {
+				return 2;
+			}
+		} 
+		return 0;
+		
+	}
 
 	public String scoreString() {
 		return playerOneScore + " - " + playerTwoScore;
