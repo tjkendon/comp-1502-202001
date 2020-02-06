@@ -34,9 +34,11 @@ public class Match {
 	
 	public void recordPlayerPoint(int player) {
 		System.out.println("Player " + player + " Scores");
+		// find the currently active game
 		Game currentGame = getActiveGame();
+		// if there is a game, then record the score
 		if (currentGame != null) {
-			currentGame.score(1);
+			currentGame.score(player);
 		}
 	}
 	
