@@ -23,17 +23,8 @@ public class Main {
 		Point o = new Point(0, 0);
 		
 		while (!o.same(p1)) {
-			Point p2 = new Point(p1.getX() - 1, p1.getY() - 1);
-			System.out.println(p2.toString());
-			p1 = p2;
+			p1.setX(p1.getX()-1);
 		}
-			
-		
-		
-		
-		
-		
-		
 
 	}
 
