@@ -4,8 +4,11 @@ public class Animal {
 	
 	protected String eyeColour;
 	
-	public Animal() {
-		System.out.println("ANimal");
+	
+	
+	public Animal(String eyeColour) {
+		//System.out.println("Animal");
+		this.eyeColour = eyeColour;
 	}
 	
 	public void eat() {
@@ -14,6 +17,10 @@ public class Animal {
 	
 	public void sleep() {
 		System.out.println("Zzzz Zzzz Zzzz");
+	}
+	
+	public void speak() {
+		System.out.println("I AM AN ANIMAL");
 	}
 
 }

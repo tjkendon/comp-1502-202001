@@ -26,12 +26,15 @@ public class Game {
 	}
 
 	public boolean isWon() {
-		if (((playerOneScore >= 11) && (playerOneScore >= playerTwoScore + 2))
-				|| ((playerTwoScore >= 11) && (playerTwoScore >= playerOneScore + 2))) {
-			return true;
-		} else {
-			return false;
-		}
+//		if (((playerOneScore >= 11) && (playerOneScore >= playerTwoScore + 2))
+//				|| ((playerTwoScore >= 11) && (playerTwoScore >= playerOneScore + 2))) {
+//			return true;
+//		} else {
+//			return false;
+//		}
+		
+		return ((playerOneScore >= 11) && (playerOneScore >= playerTwoScore + 2))
+				|| ((playerTwoScore >= 11) && (playerTwoScore >= playerOneScore + 2));
 
 	}
 	
