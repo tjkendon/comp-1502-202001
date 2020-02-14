@@ -1,4 +1,6 @@
 
+package le1p2;
+
 public class Author {
 	
 	private String name;
