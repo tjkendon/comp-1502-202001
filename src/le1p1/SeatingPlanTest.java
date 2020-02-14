@@ -138,6 +138,103 @@ public class SeatingPlanTest {
         
     }
     
+    @Test
+    public void testAssignment() {
+    	
+    	ArrayList<Student> section1 = new ArrayList<>();
+        ArrayList<Student> section2 = new ArrayList<>();
+        
+        Student alice = new Student("Alice");
+        section1.add(alice);
+        
+        Student bob = new Student("Bob");
+        section2.add(bob);
+        
+        Student carol = new Student("Carol");
+        section1.add(carol);
+        
+        Student dave = new Student("Dave");
+        section2.add(dave);
+        
+        
+        Seat one = new Seat(1);
+        Seat two = new Seat(2);
+        Seat three = new Seat(3);
+        ArrayList<Seat> seats = new ArrayList<>();
+        seats.add(one);
+        seats.add(two);
+        seats.add(three);
+        
+        SeatingPlan plan = new SeatingPlan(section1,
+                section2,
+                seats);
+        
+        ArrayList<Assignment> expectedAssignment = 
+        		new ArrayList<>();
+        
+        expectedAssignment.add(new Assignment(alice, one));
+        expectedAssignment.add(new Assignment(bob, two));
+        expectedAssignment.add(new Assignment(carol, three));
+        
+        assertEquals(3, plan.getAssignment().size());
+        
+        
+        // we'll find a smarter solution for this shortly.
+        assertEquals(
+        		expectedAssignment.get(0).getStudent(), 
+        		plan.getAssignment().get(0).getStudent());
+        assertEquals(
+        		expectedAssignment.get(0).getSeat(), 
+        		plan.getAssignment().get(0).getSeat());
+        assertEquals(
+        		expectedAssignment.get(1).getStudent(), 
+        		plan.getAssignment().get(1).getStudent());
+        assertEquals(
+        		expectedAssignment.get(1).getSeat(), 
+        		plan.getAssignment().get(1).getSeat());
+        assertEquals(
+        		expectedAssignment.get(2).getStudent(), 
+        		plan.getAssignment().get(2).getStudent());
+        assertEquals(
+        		expectedAssignment.get(2).getSeat(), 
+        		plan.getAssignment().get(2).getSeat());
+    	
+    }
     
+    @Test
+    public void testGetWaiting() {
+    	ArrayList<Student> section1 = new ArrayList<>();
+        ArrayList<Student> section2 = new ArrayList<>();
+        
+        Student alice = new Student("Alice");
+        section1.add(alice);
+        
+        Student bob = new Student("Bob");
+        section2.add(bob);
+        
+        Student carol = new Student("Carol");
+        section1.add(carol);
+        
+        Student dave = new Student("Dave");
+        section2.add(dave);
+        
+        
+        Seat one = new Seat(1);
+        Seat two = new Seat(2);
+        Seat three = new Seat(3);
+        ArrayList<Seat> seats = new ArrayList<>();
+        seats.add(one);
+        seats.add(two);
+        seats.add(three);
+        
+        SeatingPlan plan = new SeatingPlan(section1,
+                section2,
+                seats);
+        
+        ArrayList<Student> expectedWaiting = new ArrayList<>();
+        expectedWaiting.add(dave);
+        
+        assertEquals(expectedWaiting, plan.getWaiting());
+    }
     
 }
