@@ -2,9 +2,10 @@ package inheritance;
 
 public class FourLeggedPredator extends Animal {
 
-	//public FourLeggedPredator() {
-		//System.out.println("FourLeggedPredator");
-	//}
+	public FourLeggedPredator(String eyeColour) {
+		super(eyeColour);
+		System.out.println("FourLeggedPredator");
+	}
 	
 	public void printEyeColour() {
 		super.eyeColour = "Red";

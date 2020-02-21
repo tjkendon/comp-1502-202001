@@ -4,7 +4,8 @@ public class Cat extends FourLeggedPredator {
 
 	protected boolean clawsIn;
 	
-	public Cat() {
+	public Cat(String eyeColour) {
+		super(eyeColour);
 		//System.out.println("Cat");
 	}
 	

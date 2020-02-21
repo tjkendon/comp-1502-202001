@@ -2,8 +2,8 @@ package inheritance;
 
 public class HouseCat extends Cat {
 
-	public HouseCat() {
-		
+	public HouseCat(String eyeColour) {
+		super(eyeColour);
 	}
 	
 	public void purr() {
