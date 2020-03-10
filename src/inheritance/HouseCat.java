@@ -12,7 +12,7 @@ public class HouseCat extends Cat {
 	
 	@Override
 	public void speak() {
-		super.speak();
+		//super.speak();
 		System.out.println("Meow.");
 	}
 	
