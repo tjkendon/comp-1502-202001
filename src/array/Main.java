@@ -4,6 +4,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
+		
+		
 		int[] numbers = new int[10];
 		// int[] is a reference to an *array* of ints
 		// numbers is the reference name
@@ -62,5 +64,7 @@ public class Main {
 		b.append("]");
 		return(b.toString());
 	}
+	
+	
 
 }
