@@ -25,4 +25,5 @@ public interface NoiseMaker {
 
 // Java provides several for built in work
 //   comparable
-//   serializable 
+//   serializable - means that the object can be written to a file doesn't define methods
+//                  just a contract 
