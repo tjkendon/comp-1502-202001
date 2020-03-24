@@ -20,3 +20,9 @@ public interface NoiseMaker {
 	
 	
 }
+
+// could think about an interface as a list of methods that a class needs to implement
+
+// Java provides several for built in work
+//   comparable
+//   serializable 
