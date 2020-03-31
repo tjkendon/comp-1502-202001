@@ -1,11 +1,8 @@
 package exceptions;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
@@ -49,8 +46,8 @@ public class Main {
 		
 		try {
 			 		
-		//  methodChecked();
-		  methodUnchecked();
+		  methodChecked();
+		//  methodUnchecked();
 		//	helpfulMethod(10);
 		//	helpfulMethod(-10);
 		  
@@ -68,15 +65,15 @@ public class Main {
 			System.err.println(iae.getLocalizedMessage());
 //		}
 			
-//		} catch (FileNotFoundException fnfe) {
-//			System.err.println(fnfe.getMessage());
-//			System.err.println("Everything went wrong, Not able to find file to open");
-//		} catch (IOException ioe) {
-//			System.err.println(ioe.getMessage());
-//			System.err.println("Something is wrong with IO");
+		} catch (FileNotFoundException fnfe) {
+			System.err.println(fnfe.getMessage());
+						System.err.println("Everything went wrong, Not able to find file to open");
+		} catch (IOException ioe) {
+			System.err.println(ioe.getMessage());
+			System.err.println("Something is wrong with IO");
 		} catch (Exception e) {
 			System.err.println("I dunno");
-		}
+		} 
 		
 		System.out.println("I'm here!");
 		
@@ -103,9 +100,17 @@ public class Main {
 				File f = new File(fileName);
 
 				Scanner scanner = new Scanner(f);
+				
 				fileOK = true;
 			} catch (FileNotFoundException fnfe) {
 				System.out.println("Not able to find file, please try again");
+			} catch (IOException ioe) {
+				System.out.println("IO Exception");
+				//scanner.close();
+			} finally {
+				// this is always run whether the try finished
+				// or one of the exceptions was run
+				//scanner.close();
 			}
 		}
 		
